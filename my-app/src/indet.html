@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="./Styles/style.css" rel="stylesheet" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sarmala">
+      <div class="splitter"> <img
+        src="../images/logo.svg"
+        class="people_icon yukarı"
+      /></div>
+      <div class="box">
+        <div class="icindekiler">
+          <div class="sol taraf">
+            <div class="first_input">
+              <p>Bill</p>
+              <div class="bill_input">
+                <img
+                  src="../images/icon-dollar.svg"
+                  class="people_icon yukarı"
+                />
+                <input
+                  type="text"
+                  placeholder="                                                   0"
+                  class="user_bill "
+                  pattern="[0-9]+"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                />
+              </div>
+            </div>
+
+            <div class="second-selection">
+              <p>Select Tip %</p>
+              <div class="boxes">
+                <div class="row1">
+                  <div class="box1"><span>5%</span></div>
+                  <div class="box2"><span>10%</span></div>
+                  <div class="box3"><span>15%</span></div>
+                </div>
+                <div class="row2">
+                  <div class="box1"><span>25%</span></div>
+                  <div class="box2"><span>50%</span></div>
+                  <div class="box3">
+                    <span><input type="text" placeholder="Custom" /></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="third-selection">
+              <div class="yan">
+              <p>Number of People</p>
+              <p class="alert">Can't be minus or zero</p></div>
+              <div class="people-input">
+                <img src="../images/icon-person.svg" class="people_icon" />
+                <input
+                  type="text"
+                  placeholder="                                                      0"
+                  class="user_bill kaydır"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="sag taraf">
+            <div class="box">
+              <div class="first">
+                <div class="tip-amount">Tip Amount <span>/ person</span></div>
+                <div class="right-field">
+                  <div class="increase">
+                    <img src="../images/icon-dollar.svg" class="dolar" />
+                    0.00 
+                  </div>
+                </div>
+              </div>
+              <div class="second">
+                <div class="tip-amount">Total <span>/ person</span></div>
+                <div class="right-field">
+                  <div class="increase">
+                    <img src="../images/icon-dollar.svg" class="dolar" />
+                    0.00 
+                  </div>
+                </div>
+              </div>
+
+              <div class="third">
+                <button id="reset" onclick="number_of_people()">
+                 <span >RESET</span> 
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Eceeleyn</a>.
+    </div>
+  </body>
+</html>
